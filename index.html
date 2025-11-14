@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <title>ZenoAI – فرم ثبت پروژه</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="navbar">
+    <div class="logo">ZenoAI<span class="dot">.</span></div>
+    <nav class="nav-links">
+      <a href="#plans">پلن‌ها</a>
+      <a href="#form">ثبت پروژه</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-content">
+        <h1>ZenoAI – هسته فاز ۱</h1>
+        <p>
+          هوش مصنوعی برنامه‌نویس اختصاصی تو؛ آماده برای تحلیل، کدنویسی،
+          تست و تحویل پروژه‌ها با کیفیت لوکس.
+        </p>
+        <div class="hero-actions">
+          <a href="#form" class="btn primary">ثبت فوری پروژه</a>
+          <a href="#plans" class="btn ghost">مشاهده پلن‌های اشتراک</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="plans" id="plans">
+      <h2>پلن‌های اشتراک ZenoAI</h2>
+      <p class="section-subtitle">پلن‌ها مخصوص فاز ۱ – پیش‌زمینه عملیاتی ZenoAI</p>
+      <div class="plan-grid">
+        <article class="plan-card">
+          <h3>Basic</h3>
+          <p class="price">۹۹<span>$ / ماه</span></p>
+          <ul>
+            <li>۱ پروژه سبک در روز</li>
+            <li>تحلیل و کدنویسی خودکار</li>
+            <li>گزارش نهایی ساده</li>
+          </ul>
+        </article>
+
+        <article class="plan-card featured">
+          <div class="badge">پیشنهادی</div>
+          <h3>Pro</h3>
+          <p class="price">۲۹۹<span>$ / ماه</span></p>
+          <ul>
+            <li>۱ تا ۲ پروژه کامل در روز</li>
+            <li>کیفیت بالا برای کلاینت‌های جدی</li>
+            <li>گزارش حرفه‌ای و تست کامل</li>
+          </ul>
+        </article>
+
+        <article class="plan-card">
+          <h3>VIP</h3>
+          <p class="price">۹۹۹<span>$ / ماه</span></p>
+          <ul>
+            <li>۴ تا ۵ پروژه‌ی ۵۰۰۰ دلاری در روز</li>
+            <li>اولویت پردازش و تحویل</li>
+            <li>تمرکز روی پروژه‌های سطح جهانی</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <section class="form-section" id="form">
+      <h2>فرم ثبت پروژه</h2>
+      <p class="section-subtitle">
+        اطلاعات پروژه‌ات رو وارد کن؛ ZenoAI برای تحلیل و اجرا آماده است.
+      </p>
+
+      <!--
+        نکته مهم:
+        برای ارسال مستقیم فرم به ایمیل، پیشنهاد می‌کنم از Formspree استفاده کنی.
+        ۱. در Formspree ثبت‌نام کن.
+        ۲. یک فرم بساز و "Form ID" بگیر.
+        ۳. مقدار YOUR_FORM_ID را در action زیر جایگزین کن.
+      -->
+
+      <form
+        class="project-form"
+        action="https://formspree.io/f/YOUR_FORM_ID"
+        method="POST"
+      >
+        <div class="form-row">
+          <div class="form-field">
+            <label for="name">نام کامل</label>
+            <input id="name" name="name" type="text" required />
+          </div>
+          <div class="form-field">
+            <label for="email">ایمیل</label>
+            <input id="email" name="email" type="email" required />
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-field">
+            <label for="title">عنوان پروژه</label>
+            <input id="title" name="title" type="text" required />
+          </div>
+          <div class="form-field">
+            <label for="projectType">نوع پروژه</label>
+            <select id="projectType" name="projectType" required>
+              <option value="">انتخاب کنید</option>
+              <option value="web">وب‌سایت / پنل</option>
+              <option value="mobile">اپلیکیشن موبایل</option>
+              <option value="ai">سیستم هوش مصنوعی</option>
+              <option value="api">API / بک‌اند</option>
+              <option value="other">سایر</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-field">
+            <label for="budget">بودجه حدودی (دلار)</label>
+            <input
+              id="budget"
+              name="budget"
+              type="number"
+              min="0"
+              step="100"
+              placeholder="مثلاً ۵۰۰۰"
+            />
+          </div>
+          <div class="form-field">
+            <label for="deadline">ددلاین تقریبی</label>
+            <input id="deadline" name="deadline" type="date" />
+          </div>
+        </div>
+
+        <div class="form-field">
+          <label>پلن مدنظر</label>
+          <div class="plan-options">
+            <label>
+              <input type="radio" name="plan" value="Basic" checked />
+              Basic – ۹۹$
+            </label>
+            <label>
+              <input type="radio" name="plan" value="Pro" />
+              Pro – ۲۹۹$
+            </label>
+            <label>
+              <input type="radio" name="plan" value="VIP" />
+              VIP – ۹۹۹$
+            </label>
+          </div>
+        </div>
+
+        <div class="form-field">
+          <label for="description">توضیحات پروژه</label>
+          <textarea
+            id="description"
+            name="description"
+            rows="5"
+            placeholder="نیازها، ویژگی‌ها، تکنولوژی‌های مدنظر و هر توضیح مهم دیگر را بنویس..."
+            required
+          ></textarea>
+        </div>
+
+        <button type="submit" class="btn primary full">
+          ارسال پروژه برای ZenoAI
+        </button>
+        <p class="form-note">
+          با ارسال فرم، اطلاعات پروژه برای بررسی اولیه به ZenoAI ارسال می‌شود.
+        </p>
+      </form>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>Harby Motors × ZenoAI – فاز ۱، پیش‌زمینه عملیاتی</p>
+  </footer>
+</body>
+</html>
