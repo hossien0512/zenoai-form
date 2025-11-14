@@ -349,3 +349,16 @@ section {
     grid-template-columns: 1fr;
   }
 }
+.top-header {
+    width: 100%;
+    padding: 20px 30px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.logo {
+    width: 85px;
+    height: auto;
+    border-radius: 15px;
+}
