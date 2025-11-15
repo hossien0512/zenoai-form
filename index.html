@@ -1,315 +1,581 @@
 <!DOCTYPE html>
 <html lang="fa" dir="rtl">
-  <head>
-    <meta charset="UTF-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1.0"
-    />
-    <title>ZenoAI – هسته فاز ۱</title>
+<head>
+  <meta charset="UTF-8" />
+  <title>ZenoAI – فرم ثبت پروژه</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="styles.css" />
 
-    <link rel="stylesheet" href="styles.css" />
+  <style>
+    /* چند استایل سبک برای زبان و هدر (با استایل قبلی تداخل جدی نداره) */
+    body {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
 
-    <meta
-      name="description"
-      content="ZenoAI – هسته فاز ۱: هوش مصنوعی برنامه‌نویس اختصاصی برای تحلیل، تخمین و اجرای پروژه‌های نرم‌افزاری با کیفیت لوکس."
-    />
-  </head>
-  <body>
-    <!-- هدر بالا + لوگو -->
-    <header class="top-header">
-      <div class="top-header-left">
-        <h1 class="site-title">ZenoAI – هسته فاز ۱</h1>
-        <p class="site-subtitle">هوش مصنوعی برنامه‌نویس اختصاصی با کیفیت لوکس</p>
-      </div>
+    .top-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 16px 24px;
+    }
 
-      <nav class="top-nav">
-        <a href="#plans">پلن‌ها</a>
-        <a href="#project">ثبت پروژه</a>
-        <a href="#payment">پرداخت</a>
-      </nav>
+    .logo {
+      width: 72px;
+      height: auto;
+      border-radius: 16px;
+    }
 
-      <div class="top-header-right">
-        <img
-          src="https://raw.githubusercontent.com/hossien0512/zenoai-form/refs/heads/main/file_0000000089847246aff2b9e7f3300652.png"
-          alt="ZenoAI Logo"
-          class="logo"
-        />
-      </div>
-    </header>
+    .lang-switch {
+      display: flex;
+      gap: 8px;
+      align-items: center;
+    }
 
-    <main>
-      <!-- سکشن معرفی -->
-      <section class="hero">
-        <div class="hero-content">
-          <h2>هسته فاز ۱ ZenoAI آمادهٔ اولین مأموریت‌هاست</h2>
-          <p>
-            پروژه‌ات رو به ZenoAI بده تا صفر تا صدش ــ از تحلیل و تخمین تا کدنویسی
-            و تست ــ با کیفیت برند لوکس انجام بشه. پرداخت، شروع از همین‌جا.
-          </p>
+    .lang-switch button {
+      border: none;
+      padding: 6px 10px;
+      border-radius: 999px;
+      cursor: pointer;
+      font-size: 12px;
+      opacity: 0.7;
+    }
 
-          <div class="hero-actions">
-            <a href="#project" class="btn btn-primary">
-              ثبت فوری پروژه
-            </a>
-            <a href="#plans" class="btn btn-ghost">
-              مشاهده پلن‌های اشتراک
-            </a>
-          </div>
-        </div>
-      </section>
+    .lang-switch button.active {
+      opacity: 1;
+      font-weight: 600;
+      outline: 1px solid rgba(255, 255, 255, 0.3);
+    }
 
-      <!-- سکشن پلن‌ها -->
-      <section id="plans" class="plans-section">
-        <h2>پلن‌های اشتراک ZenoAI</h2>
-        <p class="section-subtitle">
-          پلن مخصوص فاز ۱ – پیش‌زمینه عملیاتی ZenoAI برای پروژه‌های واقعی.
-        </p>
+    main {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 16px 48px;
+    }
 
-        <div class="plans-grid">
-          <!-- Basic -->
-          <article class="plan-card">
-            <h3>Basic</h3>
-            <p class="plan-price">۹۹<span>$ / ماه</span></p>
-            <ul class="plan-features">
-              <li>۱ پروژه سبک در هر دوره</li>
-              <li>تحلیل و کدنویسی خودکار</li>
-              <li>گزارش نهایی ساده</li>
-            </ul>
-            <p class="plan-note">مناسب شروع کار</p>
-          </article>
+    .hero-card, .plans-row, .form-card, .payment-card {
+      margin-top: 24px;
+    }
 
-          <!-- Pro -->
-          <article class="plan-card plan-card-featured">
-            <div class="plan-badge">پیشنهادی</div>
-            <h3>Pro</h3>
-            <p class="plan-price">۲۹۹<span>$ / ماه</span></p>
-            <ul class="plan-features">
-              <li>۲ تا ۳ پروژه کامل در هر دوره</li>
-              <li>کیفیت بالا در کدنویسی و ساختار</li>
-              <li>بررسی نهایی و گزارش مستند کامل</li>
-              <li>مناسب پروژه‌های جدی</li>
-            </ul>
-          </article>
+    .hero-card {
+      padding: 24px;
+      border-radius: 18px;
+    }
 
-          <!-- VIP -->
-          <article class="plan-card">
-            <h3>VIP</h3>
-            <p class="plan-price">۹۹۹<span>$ / ماه</span></p>
-            <ul class="plan-features">
-              <li>۳ تا ۵ پروژه سنگین در هر دوره</li>
-              <li>تمرکز ویژه روی پرفورمنس و اسکِیل</li>
-              <li>آماده‌سازی برای پروژه‌های سطح جهانی</li>
-            </ul>
-            <p class="plan-note">فقط برای پروژه‌های خیلی خاص</p>
-          </article>
-        </div>
-      </section>
+    .plans-row {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 16px;
+      margin-top: 24px;
+    }
 
-      <!-- سکشن فرم ثبت پروژه (اتصال Formspree) -->
-      <section id="project" class="project-section">
-        <h2>فرم ثبت پروژه</h2>
-        <p class="section-subtitle">
-          اطلاعات پروژه‌ات رو وارد کن؛ ZenoAI برای تحلیل و اجرا آماده است.
-        </p>
+    .plan-card {
+      padding: 20px;
+      border-radius: 18px;
+    }
 
-        <form
-          id="project-form"
-          class="project-form"
-          action="https://formspree.io/f/xldabygv"
-          method="POST"
-        >
-          <!-- ردیف ۱: نام + ایمیل -->
-          <div class="form-row">
-            <div class="form-field">
-              <label for="fullName">نام کامل *</label>
-              <input
-                id="fullName"
-                name="fullName"
-                type="text"
-                placeholder="مثلاً Hossien Harby"
-                required
-              />
-            </div>
+    .plan-card.featured {
+      box-shadow: 0 0 0 1px rgba(0, 255, 128, 0.4);
+    }
 
-            <div class="form-field">
-              <label for="email">ایمیل *</label>
-              <input
-                id="email"
-                name="email"
-                type="email"
-                placeholder="example@mail.com"
-                required
-              />
-            </div>
-          </div>
+    .plan-price {
+      font-size: 20px;
+      font-weight: 700;
+      margin: 8px 0;
+    }
 
-          <!-- ردیف ۲: عنوان + نوع پروژه -->
-          <div class="form-row">
-            <div class="form-field">
-              <label for="projectTitle">عنوان پروژه *</label>
-              <input
-                id="projectTitle"
-                name="projectTitle"
-                type="text"
-                placeholder="مثلاً ZenoCore – سیستم مدیریت پروژه"
-                required
-              />
-            </div>
+    .plan-period {
+      font-size: 12px;
+      opacity: 0.8;
+    }
 
-            <div class="form-field">
-              <label for="projectType">نوع پروژه *</label>
-              <select id="projectType" name="projectType" required>
-                <option value="" disabled selected>انتخاب کنید</option>
-                <option value="web-app">وب‌اپلیکیشن / پنل مدیریت</option>
-                <option value="mobile-app">اپ موبایل</option>
-                <option value="ai-service">سرویس هوش مصنوعی</option>
-                <option value="automation">اتوماسیون و اسکریپت</option>
-                <option value="other">سایر</option>
-              </select>
-            </div>
-          </div>
+    .form-card, .payment-card {
+      padding: 24px;
+      border-radius: 18px;
+      margin-bottom: 24px;
+    }
 
-          <!-- ردیف ۳: ددلاین + بودجه -->
-          <div class="form-row">
-            <div class="form-field">
-              <label for="duration">ددلاین تقریبی *</label>
-              <input
-                id="duration"
-                name="duration"
-                type="text"
-                placeholder="مثلاً ۲۰ روزه، ۱ ماهه..."
-                required
-              />
-            </div>
+    .form-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 16px;
+    }
 
-            <div class="form-field">
-              <label for="budget">بودجه حدودی (دلاری) *</label>
-              <input
-                id="budget"
-                name="budget"
-                type="number"
-                min="0"
-                placeholder="مثلاً ۵۰۰"
-                required
-              />
-            </div>
-          </div>
+    .form-field {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+      margin-bottom: 12px;
+    }
 
-          <!-- ردیف ۴: پلن + TXID -->
-          <div class="form-row">
-            <div class="form-field">
-              <span class="form-label">پلن موردنظر *</span>
-              <div class="plan-options">
-                <label class="plan-option">
-                  <input type="radio" name="plan" value="basic" checked />
-                  <span>Basic – ۹۹$</span>
-                </label>
-                <label class="plan-option">
-                  <input type="radio" name="plan" value="pro" />
-                  <span>Pro – ۲۹۹$</span>
-                </label>
-                <label class="plan-option">
-                  <input type="radio" name="plan" value="vip" />
-                  <span>VIP – ۹۹۹$</span>
-                </label>
-              </div>
-            </div>
+    .form-field label {
+      font-size: 14px;
+    }
 
-            <div class="form-field">
-              <label for="txid">TXID تراکنش (بعد از پرداخت)</label>
-              <input
-                id="txid"
-                name="txid"
-                type="text"
-                placeholder="اگر همین حالا پرداخت کردی، TXID رو اینجا وارد کن"
-              />
-            </div>
-          </div>
+    .form-field input,
+    .form-field select,
+    .form-field textarea {
+      padding: 8px 10px;
+      border-radius: 10px;
+      border: none;
+      font-size: 14px;
+    }
 
-          <!-- توضیحات پروژه -->
-          <div class="form-field">
-            <label for="description">توضیحات پروژه *</label>
-            <textarea
-              id="description"
-              name="description"
-              rows="5"
-              placeholder="نیازها، تکنولوژی‌های مهم، هر توضیح مهم دیگری را بنویس..."
-              required
-            ></textarea>
-          </div>
+    .btn-primary, .btn-secondary {
+      border-radius: 999px;
+      border: none;
+      cursor: pointer;
+      padding: 10px 18px;
+      font-size: 14px;
+    }
 
-          <button type="submit" class="btn btn-primary">
-            ارسال پروژه برای ZenoAI
-          </button>
-          <p class="form-note">
-            با ارسال فرم، اطلاعات پروژه برای بررسی اولیه به ZenoAI ارسال می‌شود.
-          </p>
-        </form>
-      </section>
+    .btn-primary {
+      width: 100%;
+      margin-top: 12px;
+    }
 
-      <!-- سکشن پرداخت تتر -->
-      <section id="payment" class="payment-section">
-        <h2>(USDT – TRC20) پرداخت اشتراک با تتر</h2>
-        <p class="section-subtitle">
-          بعد از انتخاب پلن، مبلغ را با تتر روی شبکه
-          <strong>Tron (TRC20)</strong> به آدرس زیر ارسال کن و TXID را در فرم
-          بنویس.
-        </p>
+    .radio-row {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin-top: 6px;
+    }
 
-        <div class="payment-card">
-          <div class="payment-row">
-            <span class="payment-label">شبکه:</span>
-            <span>Tron – TRC20</span>
-          </div>
+    .radio-row label {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 13px;
+      cursor: pointer;
+    }
 
-          <div class="payment-row">
-            <span class="payment-label">آدرس کیف پول:</span>
-            <div class="payment-address-wrap">
-              <span id="walletAddress" class="payment-address">
-                TRVCmCPARAyDxH7pKNttWACsuM6BiDo8PL
-              </span>
-              <button
-                type="button"
-                class="btn btn-secondary btn-copy"
-                id="copyWalletBtn"
-              >
-                کپی آدرس
-              </button>
-            </div>
-          </div>
+    .payment-row {
+      margin-top: 12px;
+    }
 
-          <p class="payment-warning">
-            ⚠️ حتماً فقط روی شبکه <strong>USDT / TRC20</strong> ارسال کن.
-            ارسال روی شبکه‌های دیگر (مثلاً ERC20 یا BEP20) باعث از دست رفتن
-            سرمایه می‌شود.
-          </p>
-        </div>
-      </section>
-    </main>
+    .payment-label {
+      font-size: 13px;
+      opacity: 0.9;
+      margin-bottom: 4px;
+      display: inline-block;
+    }
 
-    <footer class="footer">
-      <p>Harby Motors × ZenoAI – پیش‌زمینه عملیاتی فاز ۱</p>
-    </footer>
+    .wallet-box {
+      padding: 10px 12px;
+      border-radius: 12px;
+      font-family: "JetBrains Mono", monospace;
+      direction: ltr;
+      font-size: 13px;
+      word-break: break-all;
+    }
 
-    <!-- اسکریپت کپی آدرس کیف پول -->
-    <script>
-      const copyBtn = document.getElementById("copyWalletBtn");
-      const walletSpan = document.getElementById("walletAddress");
+    footer.footer {
+      text-align: center;
+      padding: 24px 16px 32px;
+      font-size: 12px;
+      opacity: 0.8;
+    }
 
-      if (copyBtn && walletSpan) {
-        copyBtn.addEventListener("click", async () => {
-          try {
-            await navigator.clipboard.writeText(walletSpan.textContent.trim());
-            copyBtn.textContent = "کپی شد ✅";
-            setTimeout(() => {
-              copyBtn.textContent = "کپی آدرس";
-            }, 2000);
-          } catch (e) {
-            alert("نتونستم آدرس رو کپی کنم؛ دستی کپی کن 🙏");
-          }
-        });
+    @media (max-width: 600px) {
+      .top-header {
+        flex-direction: row;
       }
-    </script>
-  </body>
-      </html>
+    }
+  </style>
+</head>
+<body>
+
+  <!-- هدر بالا + لوگو + سوییچ زبان -->
+  <header class="top-header">
+    <div style="display:flex;align-items:center;gap:12px;">
+      <img
+        src="https://raw.githubusercontent.com/hossien0512/zenoai-form/refs/heads/main/file_0000000089847246aff2b9e7f3300652.png"
+        alt="ZenoAI Logo"
+        class="logo"
+      />
+      <div>
+        <div class="i18n"
+             data-fa="ZenoAI – فرم ثبت پروژه"
+             data-en="ZenoAI – Project Intake Form">
+          ZenoAI – فرم ثبت پروژه
+        </div>
+        <small class="i18n"
+               data-fa="هوش مصنوعی برنامه‌نویس اختصاصی برای اجرای پروژه‌های سطح جهانی."
+               data-en="A dedicated coding AI for high-end global projects.">
+          هوش مصنوعی برنامه‌نویس اختصاصی برای اجرای پروژه‌های سطح جهانی.
+        </small>
+      </div>
+    </div>
+
+    <div class="lang-switch">
+      <span style="font-size:12px;">Language:</span>
+      <button type="button" data-lang-btn="fa" class="active">FA</button>
+      <button type="button" data-lang-btn="en">EN</button>
+    </div>
+  </header>
+
+  <main>
+    <!-- کارت معرفی -->
+    <section class="hero-card">
+      <h1 class="i18n"
+          data-fa="ثبت فوری پروژه برای ZenoAI"
+          data-en="Submit Your Project to ZenoAI">
+        ثبت فوری پروژه برای ZenoAI
+      </h1>
+      <p class="i18n"
+         data-fa="فرم زیر را کامل کنید تا ZenoAI پروژه‌تان را بررسی، تحلیل و برای اجرا زمان‌بندی کند. پرداخت اشتراک بعد از توافق و تأیید نهایی انجام می‌شود."
+         data-en="Fill out the form so ZenoAI can review, analyze, and schedule your project. Subscription payment happens only after final agreement.">
+        فرم زیر را کامل کنید تا ZenoAI پروژه‌تان را بررسی، تحلیل و برای اجرا زمان‌بندی کند. پرداخت اشتراک بعد از توافق و تأیید نهایی انجام می‌شود.
+      </p>
+    </section>
+
+    <!-- بخش پلن‌ها -->
+    <section id="plans" class="plans-row">
+      <article class="plan-card">
+        <h2 class="i18n"
+            data-fa="Basic"
+            data-en="Basic">
+          Basic
+        </h2>
+        <div class="plan-price">$99<span class="plan-period"> / ماه</span></div>
+        <ul>
+          <li class="i18n"
+              data-fa="۱ پروژه سبک در هر دوره"
+              data-en="1 light project per term">
+            ۱ پروژه سبک در هر دوره
+          </li>
+          <li class="i18n"
+              data-fa="تحلیل و کدنویسی خودکار"
+              data-en="Automated analysis & coding">
+            تحلیل و کدنویسی خودکار
+          </li>
+          <li class="i18n"
+              data-fa="گزارش نهایی ساده"
+              data-en="Simple final report">
+            گزارش نهایی ساده
+          </li>
+        </ul>
+      </article>
+
+      <article class="plan-card featured">
+        <h2 class="i18n"
+            data-fa="Pro (پیشنهادی)"
+            data-en="Pro (Recommended)">
+          Pro (پیشنهادی)
+        </h2>
+        <div class="plan-price">$299<span class="plan-period"> / ماه</span></div>
+        <ul>
+          <li class="i18n"
+              data-fa="۲ تا ۳ پروژه کامل در هر دوره"
+              data-en="2–3 full projects per term">
+            ۲ تا ۳ پروژه کامل در هر دوره
+          </li>
+          <li class="i18n"
+              data-fa="کیفیت بالا در کدنویسی و تست"
+              data-en="High-quality coding & testing">
+            کیفیت بالا در کدنویسی و تست
+          </li>
+          <li class="i18n"
+              data-fa="بررسی معماری و گزارش تحلیلی"
+              data-en="Architecture review & analytical report">
+            بررسی معماری و گزارش تحلیلی
+          </li>
+        </ul>
+      </article>
+
+      <article class="plan-card">
+        <h2 class="i18n"
+            data-fa="VIP"
+            data-en="VIP">
+          VIP
+        </h2>
+        <div class="plan-price">$999<span class="plan-period"> / ماه</span></div>
+        <ul>
+          <li class="i18n"
+              data-fa="پروژه‌های سنگین و طولانی"
+              data-en="Heavy / long-term projects">
+            پروژه‌های سنگین و طولانی
+          </li>
+          <li class="i18n"
+              data-fa="پشتیبانی نزدیک و اصلاحات نامحدود در دوره قرارداد"
+              data-en="Close support & extensive revisions during contract">
+            پشتیبانی نزدیک و اصلاحات نامحدود در دوره قرارداد
+          </li>
+          <li class="i18n"
+              data-fa="مناسب همکاری‌های سطح جهانی"
+              data-en="Best for global-scale collaborations">
+            مناسب همکاری‌های سطح جهانی
+          </li>
+        </ul>
+      </article>
+    </section>
+
+    <!-- فرم ثبت پروژه -->
+    <section id="project-form" class="form-card">
+      <h2 class="i18n"
+          data-fa="فرم ثبت پروژه"
+          data-en="Project Registration Form">
+        فرم ثبت پروژه
+      </h2>
+      <p class="i18n"
+         data-fa="اطلاعات دقیق‌تر بده تا ZenoAI بتواند پروژه‌ات را درست تحلیل کند."
+         data-en="Provide clear details so ZenoAI can analyze your project properly.">
+        اطلاعات دقیق‌تر بده تا ZenoAI بتواند پروژه‌ات را درست تحلیل کند.
+      </p>
+
+      <form
+        action="https://formspree.io/f/xldabygv"
+        method="POST"
+        accept-charset="UTF-8"
+      >
+        <!-- زبان انتخابی کاربر (با جاوااسکریپت ست می‌شود) -->
+        <input type="hidden" name="language" id="langField" value="fa" />
+
+        <div class="form-grid">
+          <div class="form-field">
+            <label for="fullName" class="i18n"
+                   data-fa="نام کامل"
+                   data-en="Full name">
+              نام کامل
+            </label>
+            <input
+              id="fullName"
+              name="fullname"
+              type="text"
+              placeholder="مثلاً Hossien Harby"
+              required
+            />
+          </div>
+
+          <div class="form-field">
+            <label for="email" class="i18n"
+                   data-fa="ایمیل"
+                   data-en="Email">
+              ایمیل
+            </label>
+            <input
+              id="email"
+              name="email"
+              type="email"
+              placeholder="example@mail.com"
+              required
+            />
+          </div>
+
+          <div class="form-field">
+            <label for="projectTitle" class="i18n"
+                   data-fa="عنوان پروژه"
+                   data-en="Project title">
+              عنوان پروژه
+            </label>
+            <input
+              id="projectTitle"
+              name="project_title"
+              type="text"
+              placeholder="مثلاً ZenoCore – سیستم مدیریت پروژه"
+              required
+            />
+          </div>
+
+          <div class="form-field">
+            <label for="projectType" class="i18n"
+                   data-fa="نوع پروژه"
+                   data-en="Project type">
+              نوع پروژه
+            </label>
+            <select id="projectType" name="project_type" required>
+              <option value="" disabled selected class="i18n"
+                      data-fa="انتخاب کنید"
+                      data-en="Select">
+                انتخاب کنید
+              </option>
+              <option value="webapp">وب‌اپ / داشبورد</option>
+              <option value="mobile">اپلیکیشن موبایل</option>
+              <option value="backend">بک‌اند / API</option>
+              <option value="ai-tool">ابزار هوش مصنوعی</option>
+              <option value="other">سایر</option>
+            </select>
+          </div>
+
+          <div class="form-field">
+            <label for="deadline" class="i18n"
+                   data-fa="ددلاین تقریبی"
+                   data-en="Approximate deadline">
+              ددلاین تقریبی
+            </label>
+            <input
+              id="deadline"
+              name="deadline"
+              type="text"
+              placeholder="مثلاً ۳۰ روزه، ۲ ماهه و ..."
+              required
+            />
+          </div>
+
+          <div class="form-field">
+            <label for="budget" class="i18n"
+                   data-fa="بودجه حدودی (دلاری)"
+                   data-en="Approximate budget (USD)">
+              بودجه حدودی (دلاری)
+            </label>
+            <input
+              id="budget"
+              name="budget"
+              type="number"
+              min="0"
+              step="1"
+              placeholder="مثلاً ۵۰۰۰"
+              required
+            />
+          </div>
+        </div>
+
+        <!-- انتخاب پلن -->
+        <div class="form-field">
+          <label class="i18n"
+                 data-fa="پلن موردنظر"
+                 data-en="Preferred plan">
+            پلن موردنظر
+          </label>
+          <div class="radio-row">
+            <label>
+              <input type="radio" name="plan" value="Basic" checked />
+              Basic
+            </label>
+            <label>
+              <input type="radio" name="plan" value="Pro" />
+              Pro
+            </label>
+            <label>
+              <input type="radio" name="plan" value="VIP" />
+              VIP
+            </label>
+          </div>
+        </div>
+
+        <!-- TXID -->
+        <div class="form-field">
+          <label for="txid" class="i18n"
+                 data-fa="TXID تراکنش (بعد از پرداخت)"
+                 data-en="Transaction TXID (after payment)">
+            TXID تراکنش (بعد از پرداخت)
+          </label>
+          <input
+            id="txid"
+            name="txid"
+            type="text"
+            placeholder="اگر پرداخت انجام نشده، فعلاً خالی بگذار."
+          />
+        </div>
+
+        <!-- توضیحات پروژه -->
+        <div class="form-field">
+          <label for="description" class="i18n"
+                 data-fa="توضیحات پروژه"
+                 data-en="Project description">
+            توضیحات پروژه
+          </label>
+          <textarea
+            id="description"
+            name="description"
+            rows="5"
+            placeholder="نیازها، تکنولوژی‌های مهم، هر توضیح دیگر را بنویس..."
+            required
+          ></textarea>
+        </div>
+
+        <button type="submit" class="btn-primary i18n"
+                data-fa="ارسال پروژه برای ZenoAI"
+                data-en="Send project to ZenoAI">
+          ارسال پروژه برای ZenoAI
+        </button>
+
+        <p style="font-size:12px;opacity:0.8;margin-top:8px;"
+           class="i18n"
+           data-fa="با ارسال فرم، اطلاعات پروژه برای بررسی اولیه به ZenoAI ارسال می‌شود. نتیجه و مراحل بعدی از طریق ایمیل به شما گفته می‌شود."
+           data-en="By submitting, your project details are sent to ZenoAI for an initial review. Results and next steps will be sent to your email.">
+          با ارسال فرم، اطلاعات پروژه برای بررسی اولیه به ZenoAI ارسال می‌شود. نتیجه و مراحل بعدی از طریق ایمیل به شما گفته می‌شود.
+        </p>
+      </form>
+    </section>
+
+    <!-- بخش پرداخت تتر TRC20 -->
+    <section id="payment" class="payment-card">
+      <h2 class="i18n"
+          data-fa="پرداخت اشتراک با تتر (USDT – TRC20)"
+          data-en="Subscription Payment via USDT (TRC20)">
+        پرداخت اشتراک با تتر (USDT – TRC20)
+      </h2>
+      <p class="section-subtitle i18n"
+         data-fa="بعد از انتخاب پلن، مبلغ را با تتر روی شبکه Tron (TRC20) به آدرس زیر ارسال کن و TXID را در فرم بنویس."
+         data-en="After selecting your plan, send the amount in USDT on Tron (TRC20) to the address below and enter the TXID in the form.">
+        بعد از انتخاب پلن، مبلغ را با تتر روی شبکه Tron (TRC20) به آدرس زیر ارسال کن و TXID را در فرم بنویس.
+      </p>
+
+      <div class="payment-row">
+        <span class="payment-label i18n"
+              data-fa="شبکه:"
+              data-en="Network:">
+          شبکه:
+        </span>
+        <span>Tron – TRC20</span>
+      </div>
+
+      <div class="payment-row">
+        <span class="payment-label i18n"
+              data-fa="آدرس کیف پول:"
+              data-en="Wallet address:">
+          آدرس کیف پول:
+        </span>
+        <div class="wallet-box" id="walletAddress">
+          TRVCmCPARAyDxH7pKNttWACsuM6BiDo8PL
+        </div>
+      </div>
+
+      <p style="font-size:12px;opacity:0.9;margin-top:8px;"
+         class="i18n"
+         data-fa="⚠️ فقط USDT روی شبکه TRC20 ارسال کن. ارسال روی شبکه‌های دیگر (مثلاً BEP20 یا ERC20) باعث از دست رفتن سرمایه می‌شود."
+         data-en="⚠️ Send only USDT on TRC20. Sending on other networks (BEP20, ERC20, etc.) may result in loss of funds.">
+        ⚠️ فقط USDT روی شبکه TRC20 ارسال کن. ارسال روی شبکه‌های دیگر (مثلاً BEP20 یا ERC20) باعث از دست رفتن سرمایه می‌شود.
+      </p>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>© <span id="year"></span> ZenoAI. All rights reserved.</p>
+  </footer>
+
+  <script>
+    // سال فوتر
+    document.getElementById("year").textContent = new Date().getFullYear();
+
+    // سوییچ زبان ساده FA / EN
+    const langButtons = document.querySelectorAll("[data-lang-btn]");
+    const i18nNodes = document.querySelectorAll(".i18n");
+    const langField = document.getElementById("langField");
+
+    function setLang(lang) {
+      document.documentElement.lang = lang === "fa" ? "fa" : "en";
+      document.documentElement.dir  = lang === "fa" ? "rtl" : "ltr";
+      langField.value = lang;
+
+      langButtons.forEach(btn => {
+        btn.classList.toggle("active", btn.getAttribute("data-lang-btn") === lang);
+      });
+
+      i18nNodes.forEach(node => {
+        const text = node.getAttribute("data-" + lang);
+        if (text) node.textContent = text;
+      });
+    }
+
+    langButtons.forEach(btn => {
+      btn.addEventListener("click", () => {
+        setLang(btn.getAttribute("data-lang-btn"));
+      });
+    });
+
+    // زبان پیش‌فرض: فارسی
+    setLang("fa");
+  </script>
+</body>
+</html>
