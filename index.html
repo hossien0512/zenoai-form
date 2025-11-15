@@ -1,146 +1,284 @@
 <!DOCTYPE html>
-<html lang="fa">
+<html lang="fa" dir="rtl">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ZenoAI – فاز ۱</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <title>ZenoAI – هسته فاز ۱</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="styles.css">
 </head>
-
 <body>
+  <!-- هدر بالا -->
+  <header class="top-header">
+    <div class="brand">
+      <img
+        src="https://raw.githubusercontent.com/hossien0512/zenoai-form/refs/heads/main/file_0000000089847246aff2b9e7f3300652.png"
+        alt="ZenoAI Logo"
+        class="logo"
+      />
+      <div class="brand-text">
+        <span class="brand-name">ZenoAI</span>
+        <span class="brand-tagline">هسته فاز ۱ – پیش‌زمینه عملیاتی</span>
+      </div>
+    </div>
 
-    <!-- 🔵 هدر + لوگو -->
-    <header class="top-header">
-        <img src="https://raw.githubusercontent.com/hossien0512/zenoai-form/refs/heads/main/file_0000000089847246aff2b9e7f3300652.png"
-             alt="ZenoAI Logo"
-             class="logo">
-    </header>
+    <nav class="nav-links">
+      <a href="#plans">پلن‌ها</a>
+      <a href="#project-form">ثبت پروژه</a>
+      <a href="#payment">پرداخت</a>
+    </nav>
+  </header>
 
-    <main>
+  <main>
+    <!-- هیرو -->
+    <section class="hero">
+      <h1>هسته فاز ۱ – ZenoAI</h1>
+      <p class="hero-subtitle">
+        هوش مصنوعی برنامه‌نویس اختصاصی تو؛ آماده برای تحلیل، کدنویسی، تست و تحویل پروژه‌ها با کیفیت لاکچری.
+      </p>
 
-        <!-- 🔵 بخش عنوان اصلی -->
-        <section class="hero">
-            <h1>ZenoAI – فاز ۱ هسته</h1>
-            <p>هوش مصنوعی برنامه‌نویس اختصاصی برای تحلیل، کدنویسی، تست و اجرای پروژه‌ها با کیفیت لوکس.</p>
+      <div class="hero-actions">
+        <a href="#project-form" class="btn btn-primary">ثبت فوری پروژه</a>
+        <a href="#plans" class="btn btn-ghost">مشاهده پلن‌های اشتراک</a>
+      </div>
+    </section>
 
-            <div class="hero-buttons">
-                <a href="#plans" class="btn">مشاهده پلن‌های اشتراک</a>
-                <a href="#form" class="btn primary">ثبت فوری پروژه</a>
-            </div>
-        </section>
+    <!-- پلن‌ها -->
+    <section id="plans" class="plans-section">
+      <h2>پلن‌های اشتراک ZenoAI</h2>
+      <p class="section-subtitle">
+        پلن مخصوص فاز ۱ – پیش‌زمینه عملیاتی ZenoAI
+      </p>
 
-        <!-- 🔵 پلن‌های اشتراک -->
-        <section id="plans" class="plans">
-            <h2>پلن‌های اشتراک ZenoAI</h2>
+      <div class="plans-grid">
+        <!-- BASIC -->
+        <article class="plan-card">
+          <h3>Basic</h3>
+          <p class="plan-price">۹۹$ / ماه</p>
+          <ul class="plan-list">
+            <li>۱ پروژه سبک در هر دوره</li>
+            <li>تحلیل و کدنویسی خودکار</li>
+            <li>گزارش نهایی ساده</li>
+          </ul>
+          <p class="plan-label">پیشنهاد شروع کار</p>
+        </article>
 
-            <div class="plan-boxes">
+        <!-- PRO -->
+        <article class="plan-card plan-card--highlight">
+          <div class="plan-badge">پرمخاطب</div>
+          <h3>Pro</h3>
+          <p class="plan-price">۲۹۹$ / ماه</p>
+          <ul class="plan-list">
+            <li>۱ تا ۳ پروژه کامل در هر دوره</li>
+            <li>کیفیت بالا در کدنویسی و ساختار</li>
+            <li>بررسی نهایی و گزارش حرفه‌ای کامل</li>
+          </ul>
+          <p class="plan-label">مناسب پروژه‌های جدی</p>
+        </article>
 
-                <div class="plan">
-                    <h3>Basic</h3>
-                    <p class="price">۹۹$ / ماه</p>
-                    <p>۱ پروژه سبک در روز</p>
-                    <p>تحلیل و کدنویسی خودکار</p>
-                    <p>گزارش نهایی ساده</p>
-                </div>
+        <!-- VIP -->
+        <article class="plan-card">
+          <h3>VIP</h3>
+          <p class="plan-price">۹۹۹$ / ماه</p>
+          <ul class="plan-list">
+            <li>۳ تا ۵ پروژه ۵۰۰۰ دلاری در روز</li>
+            <li>اولویت اجرا و تحویل</li>
+            <li>تمرکز روی پروژه‌های سطح جهانی</li>
+          </ul>
+          <p class="plan-label">فقط برای بازی سطح بالا</p>
+        </article>
+      </div>
+    </section>
 
-                <div class="plan recommended">
-                    <h3>Pro</h3>
-                    <p class="price">۲۹۹$ / ماه</p>
-                    <p>۱ تا ۳ پروژه کامل در روز</p>
-                    <p>کیفیت بالا و کدنویسی تمیز</p>
-                    <p>تحویل حرفه‌ای و کامل</p>
-                </div>
+    <!-- فرم ثبت پروژه -->
+    <section id="project-form" class="form-section">
+      <h2>فرم ثبت پروژه</h2>
+      <p class="section-subtitle">
+        اطلاعات پروژه‌ات رو وارد کن؛ ZenoAI برای تحلیل و اجرا آماده‌ست.
+      </p>
 
-                <div class="plan">
-                    <h3>VIP</h3>
-                    <p class="price">۹۹۹$ / ماه</p>
-                    <p>۳ تا ۵ پروژه سنگین در روز</p>
-                    <p>اولویت پردازش + تحویل فوری</p>
-                    <p>تمرکز روی پروژه‌های سطح جهانی</p>
-                </div>
+      <form
+        class="project-form"
+        action="mailto:hhrby4272@gmail.com"
+        method="POST"
+        enctype="text/plain"
+      >
+        <div class="form-grid">
+          <div class="form-field">
+            <label for="full-name">نام کامل</label>
+            <input
+              type="text"
+              id="full-name"
+              name="full_name"
+              placeholder="مثلاً Hossien Harby"
+              required
+            />
+          </div>
 
-            </div>
-        </section>
+          <div class="form-field">
+            <label for="email">ایمیل</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="example@mail.com"
+              required
+            />
+          </div>
 
-        <!-- 🔵 فرم ثبت پروژه -->
-        <section id="form" class="form-section">
-            <h2>فرم ثبت پروژه</h2>
-            <p class="form-info">اطلاعات پروژه‌ات رو وارد کن؛ ZenoAI برای تحلیل و اجرا آماده است.</p>
+          <div class="form-field">
+            <label for="project-type">نوع پروژه</label>
+            <select id="project-type" name="project_type" required>
+              <option value="">انتخاب کنید</option>
+              <option value="website">وب‌سایت</option>
+              <option value="web-app">وب‌اپلیکیشن</option>
+              <option value="bot">بات / ربات</option>
+              <option value="ai">سیستم هوش مصنوعی</option>
+              <option value="other">سایر</option>
+            </select>
+          </div>
 
-            <form action="#" method="POST">
+          <div class="form-field">
+            <label for="project-title">عنوان پروژه</label>
+            <input
+              type="text"
+              id="project-title"
+              name="project_title"
+              placeholder="مثلاً سیستم مدیریت پروژه ZenoCore"
+              required
+            />
+          </div>
 
-                <div class="form-field">
-                    <label for="fullname">نام کامل</label>
-                    <input id="fullname" name="fullname" type="text" placeholder="نام خود را وارد کنید" required>
-                </div>
+          <div class="form-field">
+            <label for="budget">بودجه حدودی (دلار)</label>
+            <input
+              type="number"
+              id="budget"
+              name="budget"
+              placeholder="مثلاً ۵۰۰۰"
+              min="1"
+              required
+            />
+          </div>
 
-                <div class="form-field">
-                    <label for="email">ایمیل</label>
-                    <input id="email" name="email" type="email" placeholder="example@gmail.com" required>
-                </div>
+          <div class="form-field">
+            <label for="deadline">ددلاین تقریبی</label>
+            <input
+              type="text"
+              id="deadline"
+              name="deadline"
+              placeholder="مثلاً ۲۰ روزه، ۱ ماهه و ..."
+              required
+            />
+          </div>
+        </div>
 
-                <div class="form-fields-row">
-                    <div class="form-field">
-                        <label for="type">نوع پروژه</label>
-                        <select id="type" name="type" required>
-                            <option value="">انتخاب کنید</option>
-                            <option>وب اپلیکیشن</option>
-                            <option>اپ موبایل</option>
-                            <option>بات هوش مصنوعی</option>
-                            <option>سیستم اختصاصی</option>
-                            <option>دیگر...</option>
-                        </select>
-                    </div>
+        <!-- انتخاب پلن -->
+        <div class="form-field">
+          <span class="field-label">پلن موردنظر</span>
+          <div class="plans-radio">
+            <label>
+              <input type="radio" name="plan" value="Basic" checked />
+              <span>Basic – ۹۹$</span>
+            </label>
+            <label>
+              <input type="radio" name="plan" value="Pro" />
+              <span>Pro – ۲۹۹$</span>
+            </label>
+            <label>
+              <input type="radio" name="plan" value="VIP" />
+              <span>VIP – ۹۹۹$</span>
+            </label>
+          </div>
+        </div>
 
-                    <div class="form-field">
-                        <label for="title">عنوان پروژه</label>
-                        <input id="title" name="title" type="text" placeholder="عنوان پروژه" required>
-                    </div>
-                </div>
+        <!-- TXID -->
+        <div class="form-field">
+          <label for="txid">TXID تراکنش (بعد از پرداخت)</label>
+          <input
+            type="text"
+            id="txid"
+            name="txid"
+            placeholder="بعد از واریز تتر، کد TXID را اینجا وارد کن"
+          />
+          <p class="field-hint">
+            اگر هنوز پرداخت نکردی، می‌توانی فعلاً فرم را بدون TXID ارسال کنی و بعداً هماهنگ کنیم.
+          </p>
+        </div>
 
-                <div class="form-fields-row">
-                    <div class="form-field">
-                        <label for="budget">بودجه حدودی (دلار)</label>
-                        <input id="budget" name="budget" type="number" placeholder="مثلاً ۵۰۰" required>
-                    </div>
+        <!-- توضیحات -->
+        <div class="form-field">
+          <label for="description">توضیحات پروژه</label>
+          <textarea
+            id="description"
+            name="description"
+            rows="5"
+            placeholder="نیازها، تکنولوژی‌ها، ویژگی‌های مهم، هر توضیح مهم دیگر را بنویس..."
+            required
+          ></textarea>
+        </div>
 
-                    <div class="form-field">
-                        <label for="education">دانش تقربی</label>
-                        <select id="education" name="education">
-                            <option>مبتدی</option>
-                            <option>متوسط</option>
-                            <option>حرفه‌ای</option>
-                        </select>
-                    </div>
-                </div>
+        <button type="submit" class="btn btn-primary btn-full">
+          ارسال پروژه برای ZenoAI
+        </button>
+        <p class="form-note">
+          با ارسال فرم، اطلاعات پروژه برای بررسی اولیه به ZenoAI ارسال می‌شود.
+        </p>
+      </form>
+    </section>
 
-                <div class="form-field">
-                    <label>پلن مدنظر</label>
-                    <div class="plans-radio">
-                        <label><input type="radio" name="plan" value="Basic" checked> Basic – ۹۹$</label>
-                        <label><input type="radio" name="plan" value="Pro"> Pro – ۲۹۹$</label>
-                        <label><input type="radio" name="plan" value="VIP"> VIP – ۹۹۹$</label>
-                    </div>
-                </div>
+    <!-- بخش پرداخت تتر -->
+    <section id="payment" class="payment-section">
+      <h2>پرداخت اشتراک با تتر (USDT – TRC20)</h2>
+      <p class="section-subtitle">
+        بعد از انتخاب پلن، مبلغ را با تتر روی شبکه Tron (TRC20) به آدرس زیر ارسال کن و TXID را در فرم بنویس.
+      </p>
 
-                <div class="form-field">
-                    <label for="description">توضیحات پروژه</label>
-                    <textarea id="description" name="description" rows="5" placeholder="نیازها، ویژگی‌ها، تکنولوژی‌های مهم، و هر توضیح مهم دیگر را بنویس..." required></textarea>
-                </div>
+      <div class="payment-card">
+        <div class="payment-row">
+          <span class="payment-label">شبکه:</span>
+          <span>Tron – TRC20</span>
+        </div>
 
-                <button type="submit" class="btn primary">ارسال پروژه برای ZenoAI</button>
+        <div class="payment-row">
+          <span class="payment-label">آدرس کیف پول:</span>
+          <div class="payment-address-wrap">
+            <span id="walletAddress" class="payment-address">
+              TRVCmCPARAyDxH7pKNttWACsuM6BiDo8PL
+            </span>
+            <button type="button" class="btn btn-copy" onclick="copyAddress()">
+              کپی آدرس
+            </button>
+          </div>
+        </div>
 
-                <p class="form-note">با ارسال فرم، اطلاعات پروژه برای بررسی اولیه به ZenoAI ارسال می‌شود.</p>
+        <p class="payment-note">
+          ⚠️ فقط USDT روی شبکه TRC20 ارسال کن.  
+          ارسال روی شبکه اشتباه (مثلاً ERC20 یا BEP20) باعث از بین رفتن سرمایه می‌شود.
+        </p>
+      </div>
+    </section>
+  </main>
 
-            </form>
-        </section>
+  <footer class="footer">
+    <p>Harby Motors × ZenoAI – فاز ۱، پیش‌زمینه عملیاتی</p>
+  </footer>
 
-    </main>
-
-    <!-- 🔵 فوتر -->
-    <footer class="footer">
-        <p>Harby Motors × ZenoAI – فاز ۱ پیش‌زمینهٔ عملیاتی</p>
-    </footer>
-
+  <script>
+    function copyAddress() {
+      const text = document.getElementById("walletAddress").textContent.trim();
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard
+          .writeText(text)
+          .then(function () {
+            alert("آدرس کیف پول کپی شد ✅");
+          })
+          .catch(function () {
+            alert("کپی انجام نشد؛ لطفاً آدرس را دستی کپی کن.");
+          });
+      } else {
+        alert("مرورگر اجازه‌ی کپی مستقیم نمی‌دهد؛ لطفاً دستی کپی کن.");
+      }
+    }
+  </script>
 </body>
 </html>
