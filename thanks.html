@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <title>تشکر از شما | ZenoAI</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <!-- استایل اصلی -->
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    .thanks-wrapper {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      background: #0a0f1f;
+    }
+
+    .thanks-main {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 2rem 1rem;
+    }
+
+    .thanks-card {
+      max-width: 520px;
+      width: 100%;
+      background: rgba(8, 20, 40, 0.92);
+      border-radius: 18px;
+      padding: 2rem 1.8rem;
+      box-shadow: 0 0 30px rgba(0, 0, 0, 0.45);
+      text-align: center;
+      border: 1px solid rgba(0, 255, 170, 0.1);
+    }
+
+    .thanks-icon {
+      font-size: 2.8rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .thanks-title-fa {
+      font-size: 1.4rem;
+      margin-bottom: 0.4rem;
+      color: #00ffaa;
+    }
+
+    .thanks-subtitle-fa {
+      font-size: 0.95rem;
+      opacity: 0.9;
+      margin-bottom: 1.4rem;
+      line-height: 1.9;
+      color: #d3f5ff;
+    }
+
+    .thanks-divider {
+      height: 1px;
+      background: linear-gradient(
+        to right,
+        transparent,
+        rgba(0, 255, 170, 0.6),
+        transparent
+      );
+      margin: 1.4rem 0;
+    }
+
+    .thanks-title-en {
+      font-size: 1.05rem;
+      margin-bottom: 0.3rem;
+      color: #00ffaa;
+    }
+
+    .thanks-subtitle-en {
+      font-size: 0.9rem;
+      opacity: 0.85;
+      line-height: 1.7;
+      direction: ltr;
+      text-align: left;
+      color: #d3f5ff;
+    }
+
+    .thanks-actions {
+      margin-top: 1.6rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.6rem;
+    }
+
+    .btn {
+      display: block;
+      padding: 0.7rem;
+      border-radius: 10px;
+      text-decoration: none;
+      font-size: 0.95rem;
+      transition: 0.2s;
+    }
+
+    .btn-primary {
+      background: #00ffaa;
+      color: #001014;
+      font-weight: bold;
+    }
+
+    .btn-secondary {
+      background: #102030;
+      color: #00ffaa;
+      border: 1px solid #00ffaa;
+    }
+
+    .btn:hover {
+      opacity: 0.85;
+    }
+
+    .thanks-note {
+      font-size: 0.78rem;
+      opacity: 0.7;
+      margin-top: 0.8rem;
+      line-height: 1.7;
+      color: #b8dffc;
+    }
+
+    footer {
+      text-align: center;
+      padding: 1rem;
+      color: #4be4a3;
+      font-size: 0.9rem;
+      opacity: 0.7;
+    }
+  </style>
+</head>
+<body>
+  <div class="thanks-wrapper">
+
+    <header class="top-header">
+      <div class="container header-inner" style="padding: 1rem; text-align:center;">
+        <span style="font-size:1.4rem; color:#00ffaa;">ZenoAI</span>
+        <div style="color:#d3f5ff; font-size:0.9rem;">پروژه شما ثبت شد</div>
+      </div>
+    </header>
+
+    <main class="thanks-main">
+      <section class="thanks-card">
+        <div class="thanks-icon">✅</div>
+
+        <h1 class="thanks-title-fa">پروژه‌ شما با موفقیت ثبت شد</h1>
+        <p class="thanks-subtitle-fa">
+          اطلاعات پروژه با موفقیت برای ZenoAI ارسال شد.  
+          ایمیل تأیید به‌زودی برای شما ارسال می‌شود.  
+          در صورت نیاز، تیم ما برای جزئیات بیشتر با شما تماس می‌گیرد.
+        </p>
+
+        <div class="thanks-divider"></div>
+
+        <h2 class="thanks-title-en">Your project has been submitted</h2>
+        <p class="thanks-subtitle-en">
+          Your project was successfully received by <strong>ZenoAI</strong>.  
+          We will review the details and contact you shortly with  
+          confirmation and next steps.
+        </p>
+
+        <div class="thanks-actions">
+          <a href="/#project-form" class="btn btn-primary">ارسال پروژه جدید</a>
+          <a href="/#plans" class="btn btn-secondary">مشاهده پلن‌ها</a>
+        </div>
+
+        <p class="thanks-note">
+          اگر ایمیل دریافت نکردید، لطفاً پوشه Spam را هم بررسی کنید.
+        </p>
+      </section>
+    </main>
+
+    <footer>
+      ZenoAI – همه حقوق محفوظ است.
+    </footer>
+
+  </div>
+</body>
+</html>
